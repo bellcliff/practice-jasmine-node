@@ -30,9 +30,9 @@ function parseLine(l, interview, interviews) {
 
 function parseFile(file) {
     console.log('parse file', file);
-    var interviews = [];
 
     return fs.readFileAsync(file, 'utf8').then(function(cnt) {
+        var interviews = [];
         var lines = cnt.split('\n');
         var interview = {};
         lines.forEach(function(l) {
